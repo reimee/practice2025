@@ -1,4 +1,4 @@
-body {
+.body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
@@ -6,9 +6,12 @@ body {
 .container {
   display: flex;
   padding: 10px 60px;
+  justify-content: space-between;
+  align-items: center;
   background: #fff;
   border-bottom: 1px solid #ddd;
   max-width: 1240px;
+  margin: 0 auto;
 }
 
 .logo h1 {
@@ -55,4 +58,21 @@ body {
 
 .cart {
   font-size: 16px;
+}
+
+.footer{
+  background: #35352F;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer_social{
+  margin: 5px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer_social a:hover{
+  color:gray;
 }
