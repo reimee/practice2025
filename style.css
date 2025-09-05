@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 .body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 .container {
-  display: flex;
   padding: 10px 60px;
-  justify-content: space-between;
-  align-items: center;
   background: #fff;
   border-bottom: 1px solid #ddd;
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.header_wrapper {
+display: flex;
+justify-content: space-between;
+}
+.header_left {
+  display: flex;
+  gap: 200px;
+  padding: 5px;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 80px;
 }
 
 .logo h1 {
@@ -34,7 +49,7 @@
   gap: 15px;
 }
 
-.delivery-img {
+.delivery_svg {
   width: 30px;
   height: 30px;
   object-fit: contain;
@@ -60,19 +75,82 @@
   font-size: 16px;
 }
 
-.footer{
+.hero {
+  background: #EBEBEE;
+  position: relative;
+  height: 100vh;
+  flex-direction: column;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+.hero_wrapper {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  z-index: 2;
+}
+
+
+.hero_wrapper p {
+  color: #6F6F65;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.hero_wrapper span {
+  font-weight: 600;
+  font-size: 28px;
+}
+.hero_wrapper h1  {
+  font-weight: 300 !important;
+  font-size: 28px;
+}
+
+.hero .btn {
+  background: #35352F;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  border: 0;
+  transition: all 500ms ease;
+}
+
+.hero .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.img_hero {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.cream_svg {
+  height: auto;
+  width: 800px;
+}
+
+
+.footer {
   background: #35352F;
   text-align: center;
   padding: 20px 0;
 }
 
-.footer_social{
+.footer_social {
   margin: 5px 0;
   color: black;
   text-decoration: none;
   font-size: 18px;
 }
 
-.footer_social a:hover{
+.footer_social a:hover{ 
   color:gray;
 }
