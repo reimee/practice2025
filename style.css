@@ -7,7 +7,7 @@
 }
 
 .container {
-  padding: 10px 60px;
+  padding: 0px 60px;
   background: #fff;
   border-bottom: 1px solid #ddd;
   max-width: 1240px;
@@ -78,40 +78,49 @@ justify-content: space-between;
 }
 
 .hero {
-  height: calc(100vh - 145px);
-  background: #EBEBEE;
-  overflow: hidden;
+  min-height: calc(100vh - 145px);
   position: relative;
+  background: #EBEBEE;
+  background-image: url("./images/cream.svg");
+  background-repeat: no-repeat;
+  background-position: 81% 24%;
+  background-size: 72%; 
+  overflow: hidden;
+  padding-bottom: 0px;
 }
 
-.hero::after {
-  content: url("./images/cream.svg");
-  position: absolute;
-  top: 0;
-  right: 0;
+.wave {
+position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;   
+}
+
+.wave_png {
+  display: block;
+  width: 100%;
   height: 100%;
-  width: 80%;
-  z-index: 1;
+  object-fit: cover; 
 }
-
 .cream_btn {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 10px;
   background: #fdfdfd65;
-  padding: 8px 24px;
+  padding: 5px 15px;
   border-radius: 25px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   color: black;
   z-index: 3;
 }
 
 .pill-icon {
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: #35352F; 
   border: 5px solid #ccc;
@@ -123,18 +132,18 @@ justify-content: space-between;
 }
 
 .btn_1 {
-  top: 60%;
-  left: 49%;
+  top: 48%;
+  left: 44%;
 }
 
 .btn_2 {
-  bottom: 14%;
-  right: 33%;
+  bottom: 77%;
+  left: 44%;
 }
 
 .btn_3 {
-  top: 28%;
-  left: 82%;
+  top: 30%;
+  left: 76%;
 }
 
 
@@ -180,16 +189,41 @@ justify-content: space-between;
   transform: scale(1.1);
 }
 
-.wave {
+
+.product_section {
   position: relative;
-  height: 150px;
+  background: #fff;
+  padding: 50px 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
+.product_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
 
-.footer {
+.img_product {
+  position: relative;
+  width: 90%;
+  height: auto;
+}
+.lotion_jpeg {
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* .footer {
   background: #35352F;
   text-align: center;
   padding: 20px 0;
+  width: 100%;
 }
 
 .footer_social {
@@ -201,4 +235,4 @@ justify-content: space-between;
 
 .footer_social a:hover{ 
   color:gray;
-}
+} */
