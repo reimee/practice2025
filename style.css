@@ -95,16 +95,18 @@ justify-content: space-between;
 }
 
 .cream_btn {
+  position: absolute;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #fff;
+  background: #fdfdfd65;
   padding: 8px 24px;
   border-radius: 25px;
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   font-size: 16px;
   font-weight: 400;
   color: black;
+  z-index: 3;
 }
 
 .pill-icon {
@@ -121,19 +123,18 @@ justify-content: space-between;
 }
 
 .btn_1 {
-  top: 10%;
-  left: -180px;
+  top: 60%;
+  left: 49%;
 }
 
 .btn_2 {
-  bottom: 20%;
-  right: -200px;
+  bottom: 14%;
+  right: 33%;
 }
 
 .btn_3 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-250%, -150%);
+  top: 28%;
+  left: 82%;
 }
 
 
