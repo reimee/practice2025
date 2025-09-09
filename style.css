@@ -89,19 +89,25 @@ justify-content: space-between;
   padding-bottom: 0px;
 }
 
-.wave {
-position: absolute;
-  left: 0;
-  bottom: 0;
+.hero_content {
+  position: relative;
   width: 100%;
-  z-index: 2;   
+  max-width: 1240px;
+  margin: 0 auto;
 }
+
+.wave {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;}
 
 .wave_png {
   display: block;
+  height: auto;
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  position: relative;
+  top: -90px; 
 }
 .cream_btn {
   position: absolute;
@@ -132,18 +138,18 @@ position: absolute;
 }
 
 .btn_1 {
-  top: 48%;
+  top: 70%;
   left: 44%;
 }
 
 .btn_2 {
-  bottom: 77%;
+  bottom: 74%;
   left: 44%;
 }
 
 .btn_3 {
   top: 30%;
-  left: 76%;
+  left: 78%;
 }
 
 
@@ -193,24 +199,49 @@ position: absolute;
 .product_section {
   position: relative;
   background: #fff;
-  padding: 50px 60px;
+  padding: 60px 50px;
   max-width: 1240px;
   margin: 0 auto;
-  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .product_wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
   position: relative;
   z-index: 3;
 }
+/* .product_info{
+  max-width: 600px;
+  flex: 1;
+} */
+.product_features {
+  margin-top: 20px;
+  
+}
 
+.product_features h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+.feature_name {
+  color: #35352F;
+  font-size: 14px;
+  font-weight: 400;
+}
+.feature_value {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
 .img_product {
   position: relative;
-  width: 90%;
+  width: 60%;
   height: auto;
 }
 .lotion_jpeg {
@@ -218,6 +249,7 @@ position: absolute;
   display: block;
   width: 100%;
 }
+
 
 /* .footer {
   background: #35352F;
