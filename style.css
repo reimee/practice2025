@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-.body {
+body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -136,7 +135,7 @@ justify-content: space-between;
   font-size: 13px;
   font-weight: 400;
   color: black;
-  z-index: 3;
+  z-index: 25;
   transition: all 0.3 ease;
   cursor: pointer;
 }
@@ -156,8 +155,9 @@ justify-content: space-between;
 }
 
 .cream_btn:hover .pill-icon {
-  border-color: green;
+  background: green;
 }
+
 
 
 .btn_1 {
@@ -324,10 +324,18 @@ justify-content: space-between;
 
 .ingredients {
   display: grid;
-  grid-template-columns: repeat(3, 1ft);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .ingredient p {
@@ -337,31 +345,18 @@ justify-content: space-between;
 }
 
 .bubbles {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  position: relative;
+  width: 220px;
+  height: 220px;
   margin-bottom: 10px;
+  right: 20px;
 }
 
 .bubble {
+  position: absolute;
   background: #35352F; 
   border-radius: 50%;
   border: 1px solid #ccc;
-}
-
-.big_bubble {
-  width: 70px;
-  height: 70px;
-}
-
-.medium_bubble {
-  width: 50px;
-  height: 50px;
-}
-
-.small_bubble {
-  width: 30px;
-  height: 30px;
 }
 
 .tags {
@@ -376,6 +371,82 @@ justify-content: space-between;
   border-radius: 20px;
   font-size: 13px;
   color: #35352F;
+  background: #a6a6a67b;
+}
+
+
+.order_form {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 15px;
+  color: #35352F;
+}
+
+.design {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 20px 20px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: black;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.price_summar {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+ 
+}
+
+.finaly_price {
+font-size: 18px;
+}
+
+.btn_order {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn_order:hover {
+  background-color: #555;
 }
 /* .footer {
   background: #35352F;

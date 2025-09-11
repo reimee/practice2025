@@ -82,6 +82,7 @@
             <div class="product_features">
               <h2 class="title_info">Ліпідно-відновлювальний <br> лосьйон для тіла</h2>
               <p class="price_info">750 грн</p>
+
               <h3>Характеристики:</h3>
                   
                 <div class="feature">
@@ -135,10 +136,11 @@
       <article class="ingredient">
 
         <div class="bubbles">
-          <span class="big_bubble"></span>
+          <img src="/images/bubble_1.jpg" alt="bubble_1" class="bubble_1">
+
         </div>
         
-        <h3>Масло апельсина</h3>
+        <p>Масло апельсина</p>
 
         <div class="tags">
           <span class="tag">Антикомедогенна дія</span>
@@ -151,22 +153,66 @@
 
       <article class="ingredient">
         <div class="bubbles">
-          <span class="big_bubble"></span>
-          <span class="medium_bubble"></span>
-          <span class="small_bubble"></span>
+          <img src="/images/bubble_2.jpg" alt="bubble_2" class="bubble_2">
         </div>
         <p>Масла ШИ, кокосу, мигдалю та шипшини</p>
       </article>
 
       <article class="ingredient">
         <div class="bubbles">
-          <span class="big_bubble"></span>
-          <span class="medium_bubble"></span>
-          <span class="small_bubble"></span>
+          <img src="/images/bubble_3.jpg" alt="bubble_3" class="bubble_3">
         </div>
         <p>Флавоноїди бджолиного воску, каристероли, тритерпенові спирти олії ши, вітамін Е</p>
-      </article>
       
+      </article>
+    </section>
+
+    <section class="order_form">
+      <p><span class="design">Оформлення замовлення</span></p>
+
+      <form>
+        <div class="form_group">
+          <label for="surname">Прізвище</label>
+          <input type="text" id="surname" class="surname" required>
+        </div>
+
+        <div class="form_group">
+          <label for="name">Ім’я</label>
+          <input type="text" id="name" class="name" required>
+        </div>
+
+        <div class="form_group">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" class="phone" required>
+        </div>
+
+        <div class="form_group">
+          <label for="email">Ел. адреса</label>
+          <input type="email" id="email" class="email" required>
+        </div>
+
+        <fieldset>
+          <legend>Спосіб доставки</legend>
+          <label><input type="radio" name="delivery_order" value="nova_poshta_branch" checked> Самовивіз з відділення Нової Пошти</label><br>
+          <label><input type="radio" name="delivery_order" value="nova_poshta_courier"> Кур’єром Нової Пошти</label><br>
+          <label><input type="radio" name="delivery_order" value="ukrposhta_branch"> Самовивіз з відділення Укрпошти</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Спосіб оплати</legend>
+          <label><input type="radio" name="payment" value="prepaid" checked> За передоплатою</input></label><br>
+          <label><input type="radio" name="payment" value="card_online"> Карткою онлайн</input></label><br>
+          <label><input type="radio" name="payment" value="on_delivery"> При отриманні</input></label>
+
+        </fieldset>
+        <div class="price_summar">
+          <p><span class="price">Вартість: 750 грн</span></p>
+          <p><span class="discount">Знижка: 50 грн</span></p>
+          <p><span class="final_price">До сплати: 700 грн</span></p>
+        </div>
+        <button class="btn_order">Оформити замовлення</button>
+
+      </form>
     </section>
 
     <!-- <footer class="footer">
