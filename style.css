@@ -4,12 +4,12 @@
 .body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .container {
   padding: 0px 60px;
   background: #fff;
-  border-bottom: 1px solid #ddd;
   max-width: 1240px;
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@ justify-content: space-between;
 .header_left {
   display: flex;
   gap: 200px;
-  padding: 5px;
+  padding: 0;
 }
 
 .header_right {
@@ -89,6 +89,20 @@ justify-content: space-between;
   padding-bottom: 0px;
 }
 
+.btn {
+  background: #35352F;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  border: 0;
+  transition: all 500ms ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .hero_content {
   position: relative;
   width: 100%;
@@ -123,6 +137,12 @@ justify-content: space-between;
   font-weight: 400;
   color: black;
   z-index: 3;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.cream_btn:hover {
+  transform: scale(1.1);
 }
 
 .pill-icon {
@@ -132,11 +152,13 @@ justify-content: space-between;
   background: #35352F; 
   border: 5px solid #ccc;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.pill-text {
-  font-family: 'Inter', sans-serif;
+.cream_btn:hover .pill-icon {
+  border-color: green;
 }
+
 
 .btn_1 {
   top: 70%;
@@ -153,7 +175,6 @@ justify-content: space-between;
   left: 78%;
 }
 
-
 .hero_wrapper {
   justify-content: space-between;
   align-items: center;
@@ -168,7 +189,7 @@ justify-content: space-between;
 
 .hero_wrapper p {
   color: #6F6F65;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -182,22 +203,8 @@ justify-content: space-between;
   font-size: 28px;
 }
 
-.hero .btn {
-  background: #35352F;
-  color: #fff;
-  border-radius: 25px;
-  padding: 10px 25px;
-  border: 0;
-  transition: all 500ms ease;
-}
-
-.hero .btn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .product_section {
-  padding: 60px 20px;
+  padding: 25px 20px;
   background: #fff;
   display: flex;
   justify-content: center; 
@@ -242,7 +249,6 @@ justify-content: space-between;
   font-size: 20px;
   font-weight: 500;
   color: #000;
-  margin: 0;
 }
 
 .product_features {
@@ -281,7 +287,7 @@ justify-content: space-between;
 }
 
 .quality p {
-  margin: 0;
+  margin: 10px;
 }
 
 .quality button {
@@ -296,6 +302,8 @@ justify-content: space-between;
 
 .quality button:hover {
   background: #b7b7b730;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .buy_order {
@@ -304,16 +312,71 @@ justify-content: space-between;
   gap: 20px;
 }
 
-.btn_locion {
-    background: #35352F;
+.btn {
+  background: #35352F;
   color: #fff;
   border: none;
-  padding: 10px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, 1ft);
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.ingredient p {
+  font-size: 14px;
+  color: black;
+  margin: 15px 0;
+}
+
+.bubbles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  background: #35352F; 
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.big_bubble {
+  width: 70px;
+  height: 70px;
+}
+
+.medium_bubble {
+  width: 50px;
+  height: 50px;
+}
+
+.small_bubble {
+  width: 30px;
+  height: 30px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #35352F;
+}
 /* .footer {
   background: #35352F;
   text-align: center;
