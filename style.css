@@ -6,11 +6,106 @@ body {
   font-weight: 400;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .container {
-  padding: 0px 60px;
+  padding: 0px 30px;
   background: #fff;
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.burger { 
+  display: none;
+  position: relative; 
+  z-index: 50;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.burger::before { top: 0; }
+.burger::after { bottom: 0; }
+
+.burger.active span {
+  background: transparent;
+}
+
+.burger.active::before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .header_wrapper {
@@ -83,7 +178,7 @@ body {
 }
 
 .hero {
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   min-height: calc(100vh - 145px);
   position: relative;
@@ -94,6 +189,44 @@ body {
   background-size: 72%; 
   overflow: hidden;
   padding-bottom: 0px;
+}
+  @media (max-width: 768px) {
+    .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero_wrapper {
+    order: 1; 
+  }
+
+  .img_product {
+    order: 2; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .lotion_jpeg {
+    max-width: 80%; 
+    height: auto;
+  }
+
+  .hero_wrapper h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .hero_wrapper p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 .btn {
@@ -153,8 +286,8 @@ body {
 }
 
 .pill-icon {
-  width: 13px;
-  height: 13px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #35352F; 
   border: 5px solid #ccc;
@@ -165,8 +298,6 @@ body {
 .cream_btn:hover .pill-icon {
   background: green;
 }
-
-
 
 .btn_1 {
   top: 70%;
@@ -183,12 +314,20 @@ body {
   left: 78%;
 }
 
+@media (max-width: 768px) {
+  .btn_1,
+  .btn_2,
+  .btn_3 {
+    display: none !important;
+  }
+}
+
 .hero_wrapper {
   justify-content: space-between;
   align-items: center;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 200px 60px;
+  padding: 200px 30px;
   width: 100%;
   position: relative;
   z-index: 7;
@@ -336,7 +475,7 @@ body {
   gap: 35px;
   width: 100%;
   max-width: 100%;
-  padding: 20px 0;
+  padding: 20px 30px;
 }
 
 .ingredient {
@@ -354,7 +493,8 @@ body {
 }
 
 .bubbles {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 220px;
   height: 220px;
   margin-bottom: 10px;
@@ -366,6 +506,16 @@ body {
   background: #35352F; 
   border-radius: 50%;
   border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .ingredients {
+    grid-template-columns: 1fr; 
+  }
+
+  .bubbles {
+    display: none; 
+}
 }
 
 .tags {
@@ -385,11 +535,9 @@ body {
 
 
 .order_form {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  */
   position: relative;
   max-width: 100%;
-  margin: 50px auto;
+  margin: 0 60px;
   padding: 15px;
   color: #35352F;
 }
@@ -458,12 +606,7 @@ font-size: x-large;
   background-color: #555;
 }
 
-@media (max-width: 768px) {
-  .delivery,
-  .bubbles {
-    display: none !important;
-  }
-}
+
 /* .footer {
   background: #35352F;
   text-align: center;
