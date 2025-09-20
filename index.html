@@ -42,15 +42,30 @@
         <span></span>
       </div>
   
+      <div class="cart">
+        <img src="images/cart.jpg" alt="Корзина" id="cartIcon">
+      </div>
+
+      <div class="cart_menu" id="cartMenu">
+        <h3>Моя корзина</h3>
+        <ul id="cartItems">
+        </ul>
+
+        <p class="cart_total">До сплати: 0 грн</p>
+        <button class="checkout_btn">Оформити замовлення</button>
+      </div>
+
       <nav class="nav" id="nav">
         <ul>
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Продукти</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a href="#hero">Головна</a></li>
+          <li><a href="#product_section">Продукти</a></li>
+          <li><a href="#footer">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <!-- витягти корзину з цього дів, зробити картинкою, зробити бургер, зробити щоб хедер був зафіксованим -->
 
   <main class="hero" id="hero">
     <div class="hero_content">
@@ -71,10 +86,9 @@
       <div class="hero_wrapper">
         <p class="subtitle">Ліпідно-відновлювальний лосьйон для тіла</p>
         <h1><span>SHE eco</span> — натуральне відновлення <br> та зволоження вашої шкіри</h1>
-        <button class="btn">Замовити лосьйон</button>
+        <button class="btn_order">Замовити лосьйон</button>
       </div>
     </div>
-    
   </main>
 
     <div class="wave">
@@ -88,10 +102,8 @@
         </div>
 
           <div class="product_info">
-            
             <div class="product_features">
               <h2 class="title_info">Ліпідно-відновлювальний <br> лосьйон для тіла</h2>
-              <p class="price_info">750 грн</p>
 
               <h3>Характеристики:</h3>
                   
@@ -130,17 +142,99 @@
                   <p class="feature_name">Доставка:</p>
                   <p class="feature_value">Робимо відправку по території України та в країни Європи. Відправлення протягом 2 робочих днів з моменту отримання замовлення</p>
                       </div>
-                </div>        
+                </div> 
+
+            <div class="price_1">
+                  <p class="price_info">750 грн</p>  
+            </div>
+
           </div>         
               <div class="quality">
-                <p>Кількість: <button>-</button> 1 <button>+</button></p>
-              </div>  
+                <p>
+                  Кількість: 
+                  <button class="decrease">-</button> 
+                  <span id="quantity">1</span> 
+                  <button class="increase">+</button>
+                </p>
+              </div>
                   <div class="buy_order">
-              <button class="btn">Замовити лосьйон</button>
+              <button class="btn">Додати в кошик</button>
                   </div>
               </div>
           </div>  
     </section>
+
+    <hr class="divider">
+
+    <section class="product_section_2" id="product_section_cream">
+  <div class="product_wrapper_2">
+    <div class="img_product_2">
+      <img src="/images/cream2.jpg" alt="cream" class="cream2_jpeg">
+    </div>
+
+    <div class="product_info_2">
+      <div class="product_features_2">
+        <h2 class="title_info_2">Живильний крем для обличчя</h2>
+
+        <h3>Характеристики:</h3>
+        <div class="feature_2">
+          <div class="row">
+            <p class="feature_name_2">Аромат:</p>
+            <p class="feature_value_2">троянда, жасмин, лаванда</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Склад:</p>
+            <p class="feature_value_2">масло ши, гіалуронова кислота, екстракт алое вера, вітамін Е, масло жожоба, пантенол</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Об’єм:</p>
+            <p class="feature_value_2">100 мл</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Термін придатності:</p>
+            <p class="feature_value_2">два роки</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Термін засобу:</p>
+            <p class="feature_value_2">12 місяців після відкриття</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Виробник:</p>
+            <p class="feature_value_2">Україна</p>
+          </div>
+
+          <div class="row">
+            <p class="feature_name_2">Доставка:</p>
+            <p class="feature_value_2">Відправка по Україні та в країни Європи протягом 2 робочих днів з моменту замовлення</p>
+          </div>
+        </div> 
+        
+        <div class="price_2">
+          <p class="price_info_2">650 грн</p>
+      </div>
+        
+      </div>         
+
+      <div class="quality_2">
+        <p>
+          Кількість: 
+          <button class="decrease">-</button> 
+          <span class="quantity">1</span> 
+          <button class="increase">+</button>
+        </p>
+      </div>
+
+      <div class="buy_order_2">
+        <button class="btn">Додати в кошик</button>
+      </div>
+    </div>
+  </div>  
+</section>
 
     <section class="ingredients">
       <article class="ingredient">
@@ -235,7 +329,7 @@
       </div>  
     </footer>
     
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer_name">
         <h1>SHE</h1>
         <p>eco</p>
@@ -255,6 +349,6 @@
     </footer>
 
     <script src="script.js"></script>
-
+    <button id="scrollTopBtn">↑</button>
   </body>
 </html>
