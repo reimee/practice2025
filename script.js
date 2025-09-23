@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("#nav a").forEach(link => {
     link.addEventListener("click", (e) => {
-      const href = linkф.getAttribute('href');
+      const href = link.getAttribute('href');
       const targetId = href && href.startsWith('#') ? href.slice(1) : null;
 
       if (targetId) {
@@ -90,3 +90,37 @@ document.addEventListener("click", (e) => {
     cartMenu.classList.remove("active");
   }
 });
+
+const cart_timer = document.getElementById("cart_timer");
+const timer_btn = document.querySelectorAll(".btn");
+
+let timerID = null;
+
+function start_cart_timer() {
+  clearTimeout(timerID);
+  cart_timer.classList.add("active");
+
+  timerID = setTimeout(() => {
+    cart_timer.classList.remove("active");
+  }, 3000);
+}
+
+function stop_cart_timer() {
+  clearTimeout(timerID);
+  cart_timer.classList.remove("active");
+}
+
+timer_btn.forEach(btn => {
+  btn.addEventListener("click", () =>{
+    start_cart_timer();
+  });
+});
+
+document.addEventListener("mousedown", (e) => {
+  if (e.button === 0) stop_cart_timer();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.button === "Enter") stop_cart_timer();
+});
+
