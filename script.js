@@ -121,6 +121,6 @@ document.addEventListener("mousedown", (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.button === "Enter") stop_cart_timer();
+  if (e.key === "Enter") stop_cart_timer();
 });
 
