@@ -124,3 +124,16 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") stop_cart_timer();
 });
 
+// window.addEventListener("DOMContentLoaded", () => {
+//   if (window.location.hash) {
+//     history.replaceState(null, "", window.location.pathname + window.location.search);
+//     window.scrollTo(0, 0);
+//   }
+// });
+
+// document.querySelectorAll(".btn_order").forEach(btn => {
+//   btn.addEventListener("click", e => {
+//     e.preventDefault();
+//     document.getElementById("order_form").scrollIntoView({ behavior: "smooth", block: "start" });
+//   });
+// });
