@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  
   document.querySelectorAll("#nav a").forEach(link => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute('href');
@@ -39,25 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    document.querySelectorAll(".quality").forEach(block => {
-    const decreaseBtn = block.querySelector(".decrease");
-    const increaseBtn = block.querySelector(".increase");
-    const quantityEl = block.querySelector(".quantity");
+    document.querySelectorAll(".quality, .quality_2").forEach(block => {
+      const decreaseBtn = block.querySelector(".decrease");
+      const increaseBtn = block.querySelector(".increase");
+      const quantityEl = block.querySelector(".quantity");
 
-    let quantity = 1;
+      let quantity = 1;
 
-    increaseBtn.addEventListener("click", () => {
-      quantity++;
-      quantityEl.textContent = quantity;
-    });
-
-    decreaseBtn.addEventListener("click", () => {
-      if (quantity > 1) {
-        quantity--;
+      increaseBtn.addEventListener("click", () => {
+        quantity++;
         quantityEl.textContent = quantity;
-      }
+      });
+
+      decreaseBtn.addEventListener("click", () => {
+        if (quantity > 1) {
+          quantity--;
+          quantityEl.textContent = quantity;
+        }
+      });
     });
-  });
+   
     const scrollBtn = document.getElementById("scrollTopBtn");
 
   window.addEventListener("scroll", () => {
@@ -132,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", (e) => {
       e.preventDefault(); 
 
-      
+
       tabs.forEach(t => t.classList.remove("active"));
       contents.forEach(c => c.classList.remove("active"));
 
