@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", (e) => {
       e.preventDefault(); 
 
+      
       tabs.forEach(t => t.classList.remove("active"));
       contents.forEach(c => c.classList.remove("active"));
 
